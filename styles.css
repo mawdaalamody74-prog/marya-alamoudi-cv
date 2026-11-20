@@ -165,6 +165,19 @@ img { max-width: 100%; display: block; }
 }
 .lang-btn:hover { background: var(--navy-100); border-color: var(--navy-100); }
 
+/* Theme toggle — reuses .lang-btn styling to stay consistent with the design */
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  line-height: 1;
+  padding: 0.4rem 0.75rem;
+}
+.theme-btn svg { display: block; width: 15px; height: 15px; }
+.theme-btn__icon--moon { display: none; }
+html[data-theme="dark"] .theme-btn__icon--sun { display: none; }
+html[data-theme="dark"] .theme-btn__icon--moon { display: block; }
+
 .nav__toggle {
   display: none;
   flex-direction: column;
@@ -648,4 +661,67 @@ html.js .reveal.is-visible {
   .site-header, .hero__actions, .contact__cta { display: none; }
   body { background: #fff; }
   html.js .reveal { opacity: 1; transform: none; }
+  html[data-theme="dark"] { color-scheme: light; }
+  html[data-theme="dark"] body { background: #fff; color: #1c2530; }
 }
+
+/* ============================================================
+   Dark mode — overrides only; the light theme above is untouched
+   ============================================================ */
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #0d1520;
+  --surface: #14202f;
+  --surface-alt: #182738;
+
+  --text: #e9eef4;
+  --text-muted: #a8b6c6;
+  --border: #26374b;
+
+  --navy-100: #1f3348;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Header & navigation */
+html[data-theme="dark"] .site-header { background: rgba(13, 21, 32, 0.88); }
+html[data-theme="dark"] .nav__brand { color: #d6e3f2; }
+html[data-theme="dark"] .nav__toggle-bar { background: #cfdcec; }
+html[data-theme="dark"] .nav__link:hover,
+html[data-theme="dark"] .nav__link.is-active { color: #cfe1f7; }
+html[data-theme="dark"] .lang-btn { color: #cfe1f7; }
+
+/* Hero & headings */
+html[data-theme="dark"] .hero {
+  background:
+    radial-gradient(60rem 30rem at 80% -10%, rgba(80, 130, 190, 0.12), transparent 60%),
+    radial-gradient(45rem 25rem at 10% 110%, rgba(80, 130, 190, 0.08), transparent 60%),
+    var(--surface);
+}
+html[data-theme="dark"] .hero__name,
+html[data-theme="dark"] .section__title,
+html[data-theme="dark"] .panel__title,
+html[data-theme="dark"] .edu-card__degree,
+html[data-theme="dark"] .app-card__name { color: #f3f7fb; }
+html[data-theme="dark"] .hero__title,
+html[data-theme="dark"] .section__eyebrow,
+html[data-theme="dark"] .info-item__link { color: #8ec0f0; }
+html[data-theme="dark"] .info-item__link:hover { color: #b9d6f5; }
+
+/* Buttons */
+html[data-theme="dark"] .btn--ghost { color: #cfe1f7; }
+html[data-theme="dark"] .btn--ghost:hover { border-color: #8ec0f0; }
+
+/* Accents & timeline */
+html[data-theme="dark"] .about { border-inline-start-color: #4d86c4; }
+html[data-theme="dark"] .timeline::before { background: linear-gradient(#3f7fbf, var(--border)); }
+html[data-theme="dark"] .timeline__item::before { border-color: #6aa4dd; }
+
+/* Badges & chips — light text on the dark tint */
+html[data-theme="dark"] .tag--status,
+html[data-theme="dark"] .chip__level { color: #cfe1f7; }
+
+/* Focus outline stays visible on dark backgrounds */
+html[data-theme="dark"] :focus-visible { outline-color: #7fb2e5; }

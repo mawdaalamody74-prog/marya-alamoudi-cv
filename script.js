@@ -76,6 +76,9 @@
 
       "footer.copy": "© 2026 Maria Alamoudi",
 
+      "theme.toDark": "تفعيل الوضع الليلي",
+      "theme.toLight": "تفعيل الوضع النهاري",
+
       "lang.switchLabel": "English"
     },
 
@@ -146,6 +149,9 @@
 
       "footer.copy": "© 2026 Maria Alamoudi",
 
+      "theme.toDark": "Switch to dark mode",
+      "theme.toLight": "Switch to light mode",
+
       "lang.switchLabel": "العربية"
     }
   };
@@ -205,6 +211,7 @@
       langToggle.setAttribute("aria-label", switchLabel + " — " + t("nav.language"));
     }
     updateToggleAria();
+    updateThemeButton();
 
     storeLang(currentLang);
   }
@@ -299,6 +306,53 @@
     });
   }
 
+  /* ---------------- Theme (dark / light) ---------------- */
+  var themeToggle = document.getElementById("themeToggle");
+  var THEME_KEY = "maria-cv-theme";
+
+  function isDarkMode() {
+    return document.documentElement.getAttribute("data-theme") === "dark";
+  }
+
+  function getStoredTheme() {
+    try {
+      var stored = window.localStorage.getItem(THEME_KEY);
+      if (stored === "dark" || stored === "light") return stored;
+    } catch (e) { /* storage unavailable */ }
+    return null;
+  }
+
+  function updateThemeButton() {
+    if (!themeToggle) return;
+    var dark = isDarkMode();
+    themeToggle.setAttribute("aria-pressed", String(dark));
+    themeToggle.setAttribute("aria-label", t(dark ? "theme.toLight" : "theme.toDark"));
+  }
+
+  function setTheme(dark, persist) {
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    if (persist) {
+      try { window.localStorage.setItem(THEME_KEY, dark ? "dark" : "light"); } catch (e) { /* ignore */ }
+    }
+    updateThemeButton();
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      setTheme(!isDarkMode(), true);
+    });
+  }
+
+  /* Follow the system preference only while the user has not chosen one */
+  var schemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  function onSchemeChange(event) {
+    if (getStoredTheme()) return;
+    setTheme(event.matches, false);
+  }
+  if (schemeQuery.addEventListener) schemeQuery.addEventListener("change", onSchemeChange);
+  else if (schemeQuery.addListener) schemeQuery.addListener(onSchemeChange);
+
   /* ---------------- Init ---------------- */
+  updateThemeButton();
   setLanguage(getStoredLang() || "ar");
 })();
