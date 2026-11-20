@@ -1,0 +1,12 @@
+# Local Netlify folder
+.netlify
+
+# Dependencies
+node_modules/
+
+# Logs & temp files
+*.log
+*.tmp
+Thumbs.db
+Desktop.ini
+.DS_Store

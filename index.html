@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="doc.title">ماريا العمودي | الإدارة المالية</title>
+  <meta name="description" data-i18n-attr="content:doc.desc" content="الموقع الشخصي لماريا العمودي — الإدارة المالية والتحليل المالي والعمليات الإدارية.">
+  <meta name="color-scheme" content="light">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">تخطّي إلى المحتوى</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav container" data-i18n-attr="aria-label:nav.aria" aria-label="التنقل الرئيسي">
+      <a class="nav__brand" href="#home">
+        <span class="nav__mark" aria-hidden="true">MA</span>
+        <span class="nav__name" data-i18n="hero.name">ماريا العمودي</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu"
+              data-i18n-attr="aria-label:nav.toggle" aria-label="فتح القائمة">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <ul class="nav__list">
+          <li><a class="nav__link is-active" href="#home" data-i18n="nav.home">الرئيسية</a></li>
+          <li><a class="nav__link" href="#about" data-i18n="nav.about">نبذة عني</a></li>
+          <li><a class="nav__link" href="#education" data-i18n="nav.education">التعليم</a></li>
+          <li><a class="nav__link" href="#skills" data-i18n="nav.skills">المهارات</a></li>
+          <li><a class="nav__link" href="#contact" data-i18n="nav.contact">التواصل</a></li>
+        </ul>
+        <button class="lang-btn" id="langToggle" type="button">English</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. Home -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__monogram reveal" aria-hidden="true">MA</div>
+        <h1 class="hero__name reveal" data-i18n="hero.name">ماريا العمودي</h1>
+        <p class="hero__title reveal" data-i18n="hero.title">الإدارة المالية | التحليل المالي والعمليات الإدارية</p>
+        <p class="hero__lead reveal" data-i18n="hero.lead">أسعى إلى تطوير مهاراتي المالية والرقمية وتطبيقها في بيئات عملية تساهم في تحسين الأداء ودعم اتخاذ القرار.</p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="#about" data-i18n="hero.cta1">استكشف سيرتي</a>
+          <a class="btn btn--ghost" href="#contact" data-i18n="hero.cta2">تواصل معي</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow" data-i18n="about.eyebrow">نظرة عامة</p>
+          <h2 class="section__title" data-i18n="about.title">نبذة عني</h2>
+        </header>
+        <div class="about reveal">
+          <p class="about__text" data-i18n="about.text">أهتم بالمجالات المالية والإدارية، مع تركيز على تطوير مهاراتي في إعداد الميزانيات ودراسات الجدوى وتنظيم البيانات المالية. كما أعمل على تعزيز قدراتي في استخدام الأدوات الرقمية، وخاصة Microsoft Excel، بهدف تحويل المعرفة الأكاديمية إلى تطبيقات عملية وبناء أساس مهني قوي.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Education -->
+    <section class="section section--alt" id="education">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow" data-i18n="edu.eyebrow">المؤهلات الدراسية</p>
+          <h2 class="section__title" data-i18n="edu.title">التعليم</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <article class="edu-card">
+              <div class="edu-card__body">
+                <h3 class="edu-card__degree" data-i18n="edu.1.degree">بكالوريوس الإدارة المالية</h3>
+                <p class="edu-card__uni" data-i18n="edu.uni">الجامعة الإسلامية بمنيسوتا – أمريكا</p>
+                <ul class="edu-card__meta">
+                  <li class="tag tag--status" data-i18n="edu.1.status">قيد الدراسة</li>
+                  <li class="tag" data-i18n="edu.1.mode">تعليم عن بُعد</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li class="timeline__item reveal">
+            <article class="edu-card">
+              <div class="edu-card__body">
+                <h3 class="edu-card__degree" data-i18n="edu.2.degree">دبلوم اللغة الإنجليزية المكثف</h3>
+                <p class="edu-card__uni" data-i18n="edu.uni">الجامعة الإسلامية بمنيسوتا – أمريكا</p>
+                <ul class="edu-card__meta">
+                  <li class="tag tag--status" data-i18n="edu.1.status">قيد الدراسة</li>
+                  <li class="tag" data-i18n="edu.2.note">بالتزامن مع برنامج البكالوريوس</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. Skills & Academic Application -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow" data-i18n="skills.eyebrow">الكفاءات</p>
+          <h2 class="section__title" data-i18n="skills.title">المهارات والتطبيق الأكاديمي</h2>
+        </header>
+
+        <div class="skills-grid">
+          <div class="panel reveal">
+            <h3 class="panel__title" data-i18n="skills.tech">المهارات التقنية</h3>
+            <ul class="chip-list">
+              <li class="chip">
+                <span class="chip__name" data-i18n="skill.excel">Microsoft Excel</span>
+                <span class="chip__level" data-i18n="level.intermediate">متوسط</span>
+              </li>
+              <li class="chip"><span class="chip__name">Microsoft Word</span></li>
+              <li class="chip"><span class="chip__name">Microsoft PowerPoint</span></li>
+              <li class="chip"><span class="chip__name" data-i18n="skill.computer">استخدام الحاسب والبرامج المكتبية</span></li>
+              <li class="chip"><span class="chip__name" data-i18n="skill.data">تنظيم وتحليل البيانات المالية</span></li>
+            </ul>
+          </div>
+
+          <div class="panel reveal">
+            <h3 class="panel__title" data-i18n="skills.academic">التطبيق الأكاديمي</h3>
+            <ul class="app-list">
+              <li class="app-card" tabindex="0">
+                <span class="app-card__name" data-i18n="app.1.name">إعداد الميزانيات</span>
+                <span class="app-card__desc" data-i18n="app.1.desc">إعداد وتنظيم الميزانيات ضمن التطبيقات الدراسية.</span>
+              </li>
+              <li class="app-card" tabindex="0">
+                <span class="app-card__name" data-i18n="app.2.name">دراسات الجدوى</span>
+                <span class="app-card__desc" data-i18n="app.2.desc">إعداد دراسات الجدوى كتطبيق أكاديمي.</span>
+              </li>
+              <li class="app-card" tabindex="0">
+                <span class="app-card__name" data-i18n="app.3.name">تطبيقات Excel المالية</span>
+                <span class="app-card__desc" data-i18n="app.3.desc">تنظيم وحساب البيانات المالية باستخدام Excel.</span>
+              </li>
+            </ul>
+            <p class="panel__note" data-i18n="skills.note">تطبيقات أكاديمية ناتجة عن الدراسة، وليست خبرة عملية.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Languages & Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow" data-i18n="contact.eyebrow">للتواصل</p>
+          <h2 class="section__title" data-i18n="contact.title">اللغات والتواصل</h2>
+        </header>
+
+        <div class="contact-grid">
+          <div class="panel reveal">
+            <h3 class="panel__title" data-i18n="lang.title">اللغات</h3>
+            <ul class="lang-list">
+              <li class="lang-item">
+                <span class="lang-item__name" data-i18n="lang.ar">العربية</span>
+                <span class="lang-item__level" data-i18n="lang.ar.level">اللغة الأم</span>
+              </li>
+              <li class="lang-item">
+                <span class="lang-item__name" data-i18n="lang.en">الإنجليزية</span>
+                <span class="lang-item__level" data-i18n="lang.en.level">جيد</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel reveal">
+            <h3 class="panel__title" data-i18n="contact.info">بيانات التواصل</h3>
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="info-item__label" data-i18n="contact.location.label">الموقع</span>
+                <span class="info-item__value" data-i18n="contact.location.value">مكة المكرمة، المملكة العربية السعودية</span>
+              </li>
+              <li class="info-item">
+                <span class="info-item__label" data-i18n="contact.email.label">البريد الإلكتروني</span>
+                <a class="info-item__value info-item__link" href="mailto:marya.alamoudi@icloud.com">marya.alamoudi@icloud.com</a>
+              </li>
+              <li class="info-item">
+                <span class="info-item__label" data-i18n="contact.phone.label">رقم الهاتف</span>
+                <a class="info-item__value info-item__link" href="tel:0504208125" dir="ltr">0504208125</a>
+              </li>
+            </ul>
+            <a class="btn btn--primary contact__cta" href="mailto:marya.alamoudi@icloud.com" data-i18n="hero.cta2">تواصل معي</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__name" data-i18n="hero.name">ماريا العمودي</p>
+      <p class="site-footer__title" data-i18n="hero.title">الإدارة المالية | التحليل المالي والعمليات الإدارية</p>
+      <p class="site-footer__copy" data-i18n="footer.copy">© 2026 Maria Alamoudi</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
