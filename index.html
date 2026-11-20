@@ -12,11 +12,11 @@
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js');</script>
   <script>
-    /* Apply saved theme (or system preference) before first paint to avoid flashing */
+    /* Apply saved theme before first paint (default is light) to avoid flashing */
     (function () {
       try {
         var saved = localStorage.getItem("maria-cv-theme");
-        var dark = saved === "dark" || (saved !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        var dark = saved === "dark";
         document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
       } catch (e) {
         document.documentElement.setAttribute("data-theme", "light");

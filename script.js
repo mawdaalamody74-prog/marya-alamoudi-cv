@@ -343,14 +343,8 @@
     });
   }
 
-  /* Follow the system preference only while the user has not chosen one */
-  var schemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  function onSchemeChange(event) {
-    if (getStoredTheme()) return;
-    setTheme(event.matches, false);
-  }
-  if (schemeQuery.addEventListener) schemeQuery.addEventListener("change", onSchemeChange);
-  else if (schemeQuery.addListener) schemeQuery.addListener(onSchemeChange);
+  /* The system preference is intentionally not followed: light is the default
+     and dark mode only activates when the visitor presses the toggle (persisted above). */
 
   /* ---------------- Init ---------------- */
   updateThemeButton();
